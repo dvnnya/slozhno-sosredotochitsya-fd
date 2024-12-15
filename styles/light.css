@@ -1,16 +1,215 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+  --main-title-color: #FFC2E6;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .header {
+  background-image: initial;
+  background-color: var(--bg-color, #FFF1F7);
+}
+
+.theme-light .header__decorative-wrapper {
+  display: none;
+}
+
+.theme-light .header__theme-menu-button {
+  color: var(--text-color, #353430)
+}
+
+.theme-light .header__theme-menu-button:hover {
+  outline: 1px solid var(--text-color, #353430);
+}
+
+.theme-light .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.theme-light .header__theme-menu-button:focus-visible {
+  outline: none;
+  box-shadow: 0 1px var(--text-color, #353430);
+}
+
+.theme-light .header__theme-menu-button_active {
+  outline: 1px solid var(--text-color, #353430);;
+}
+
+.theme-light .border-corner_position_top-right {
+  border-color: var(--text-color, #353430);
+}
+
+.theme-light .border-corner_position_bottom-left {
+  border-color: var(--text-color, #353430);
+}
+
+.theme-light .header__theme-menu {
+  margin-block-start: clamp(63px, calc(63px + (170 - 63) * ((100vw - 375px) / (768 - 375))), 170px);
+}
+
+@media (width >= 1024px) {
+  .theme-light .header {
+    grid-template-columns: repeat(4, 1fr);
+    padding-block-start: 19px;
+  }
+
+  .theme-light .header__decorative-wrapper {
+    grid-column: 7 / 8;
+  }
+
+  .theme-light .header__theme-menu {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end;
+    margin-block-start: 0;
+    margin-block-end: 194px;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+  }
+
+  .theme-light .header__theme-menu-list {
+    gap: 25px;
+    flex-direction: row;
+  }
+
+  .theme-light .header__paragraph {
+    margin-inline-start: 0;
+    grid-column: 3 / 8;
+  }
+
+  .theme-light .card:nth-child(1) {
+    column-gap: 20px;
+  }
+
+  .theme-light .card:nth-child(2) .card__heading-title {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .theme-light .card:nth-child(2) .text-block:first-of-type {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .theme-light .card:nth-child(2) .text-block:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .theme-light .card:nth-child(2) .text-block:last-of-type {
+    grid-column: 3 / 4;
+    grid-row: 2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFF1F7;
+    --text-color: #353430;
+    --accent-color: #FF8DCB;
+    --main-title-color: #FFC2E6;
+    }
+
+    .theme-auto .page {
+      background-color: var(--bg-color, #FFF1F7);
+    }
+
+    .theme-auto .header {
+      background-image: initial;
+    }
+
+    .theme-auto .header__decorative-wrapper {
+      display: none;
+    }
+    
+    .theme-auto .header__theme-menu-button {
+      color: var(--text-color, #353430)
+    }
+    
+    .theme-auto .header__theme-menu-button:hover {
+      outline: 1px solid var(--text-color, #353430);
+    }
+
+    .theme-auto .header__theme-menu-button:focus {
+      outline: none;
+    }
+
+    .theme-auto .header__theme-menu-button:focus-visible {
+      outline: none;
+      box-shadow: 0 1px var(--text-color, #353430);
+    }
+
+    .theme-auto .header__theme-menu-button_active {
+      outline: 1px solid var(--text-color, #353430);;
+    }
+    
+    .theme-auto .border-corner_position_top-right {
+      border-color: var(--text-color, #353430);
+    }
+    
+    .theme-auto .border-corner_position_bottom-left {
+      border-color: var(--text-color, #353430);
+    }
+    
+    .theme-auto .header__theme-menu {
+      margin-block-start: clamp(63px, calc(63px + (170 - 63) * ((100vw - 375px) / (768 - 375))), 170px);
+    }
+
+    @media (width >= 1024px) {
+
+      .theme-auto .header {
+        grid-template-columns: repeat(4, 1fr);
+        padding-block-start: 19px;
+      }
+    
+      .theme-auto .header__decorative-wrapper {
+        grid-column: 7 / 8;
+      }
+    
+      .theme-auto .header__theme-menu {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        justify-self: center;
+        align-self: end;
+        margin-block-start: 0;
+        margin-block-end: 194px;
+        margin-inline-end: 0;
+        margin-inline-start: 0;
+      }
+    
+      .theme-auto .header__theme-menu-list {
+        gap: 25px;
+        flex-direction: row;
+      }
+    
+      .theme-auto .header__paragraph {
+        margin-inline-start: 0;
+        grid-column: 3 / 8;
+      }
+    
+      .theme-auto .card:nth-child(1) {
+        column-gap: 20px;
+      }
+    
+      .theme-auto .card:nth-child(2) .card__heading-title {
+        grid-column: 1 / 2;
+        grid-row: 1;
+      }
+    
+      .theme-auto .card:nth-child(2) .text-block:first-of-type {
+        grid-column: 1 / 2;
+        grid-row: 2;
+      }
+    
+      .theme-auto .card:nth-child(2) .text-block:nth-of-type(2) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+      }
+    
+      .theme-auto .card:nth-child(2) .text-block:last-of-type {
+        grid-column: 3 / 4;
+        grid-row: 2;
+      }
+    }
 }
