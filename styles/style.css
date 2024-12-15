@@ -2,6 +2,7 @@
   font-family: var(--main-font, sans-serif);
   color: var(--text-color, #F1B2CE);
   background-color: var(--bg-color, #000028);
+  background-attachment: fixed;
 }
 
 .header {
@@ -132,7 +133,7 @@
 
 .page__content {
   padding: 0 calc(10px + (20 - 10) * ((100vw - 375px) / (768 - 375)));
-  margin-block-start: calc(39px + (59 - 39) * ((100vw - 375px) / (768 - 375)));
+  margin-block-start: calc(40px + (59 - 40) * ((100vw - 375px) / (768 - 375)));
 }
 
 .card {
@@ -233,6 +234,8 @@
 
   .header__title {
     margin-inline-start: -20px;
+    grid-column: 1 / 6;
+    margin-block-start: calc(177px - (177 * ((100vw - 768px) / (1024 - 768))));
   }
 
   .header__decorative-wrapper {
@@ -244,11 +247,6 @@
     margin-block-start: 145px;
   }
 
-  .header__title {
-    grid-column: 1 / 6;
-    margin-block-start: calc(177px - (177 * ((100vw - 768px) / (1024 - 768))));;
-  }
-
   .header__paragraph {
     margin-block-start: calc(161px + (114 - 161) * ((100vw - 768px) / (1024 - 768)));
     margin-block-end: calc(139px + (90 - 139) * ((100vw - 768px) / (1024 - 768)));
@@ -257,7 +255,7 @@
 
   .page__content {
     padding: 20px;
-    margin-block-start: calc(39px + (40 - 39) * ((100vw - 768px) /(1024 - 768)))
+    margin-block-start: calc(39px + (39 - 39) * ((100vw - 768px) /(1024 - 768)))
   }
 
   .content {
