@@ -1,6 +1,16 @@
 :root.theme-dark {
   --bg-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --color-text-menu: #FF0070;
+  --color-text-header-paragraph: #000028;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
   --main-title-color: #DB00FF;
+  --color-card-title: #FF0070;
+  --color-decorated-angle: #FF0070;
+  --color-button-hover: rgb(255 0 112 / 0.4);
+  --main-font: 'IBM Plex mono';
+  --main-font-size: 18px;
+  --weight-regular: 400;
+  --weight-bold: 700;
 }
