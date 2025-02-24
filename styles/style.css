@@ -192,11 +192,6 @@
   margin-block-start: 10px;
 }
 
-.text-block {
-  min-width: 355px;
-  min-height: 187px;
-}
-
 .text-block__link {
   position: relative;
   text-decoration: none;
