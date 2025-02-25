@@ -362,6 +362,11 @@
     grid-row: span 2;
   }
 
+  .heading-title-reduce-concentration {
+    grid-column: 1 / -1;
+    width: 160px;
+  }
+
   .content__gallery {
     margin-block-end: clamp(
       53px,
@@ -438,6 +443,10 @@
     grid-column: 1 / 5;
   }
 
+  .heading-title-reduce-concentration {
+    width: 260px;
+  }
+
   .content {
     gap: 80px;
   }
@@ -460,7 +469,6 @@
   }
 
   .text-block-reduces-concentration {
-    grid-row: 3 / 6;
     grid-column: span 1;
   }
 }
