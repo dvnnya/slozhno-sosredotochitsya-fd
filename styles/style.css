@@ -334,6 +334,7 @@
 
   .card {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
   }
 
   .text-block_margin {
